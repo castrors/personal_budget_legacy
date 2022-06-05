@@ -1,0 +1,22 @@
+{
+  "data": {
+    "allRecords": [
+      {
+        "id": 1,
+        "amount": 100,
+        "description": "description1",
+        "category": "category1",
+        "date": "2021-10-29T16:09:08Z",
+        "isExpense": true
+      },
+      {
+        "id": 2,
+        "amount": 200,
+        "description": "description2",
+        "category": "category2",
+        "date": "2021-10-29T16:09:08Z",
+        "isExpense": false
+      }
+    ]
+  }
+}

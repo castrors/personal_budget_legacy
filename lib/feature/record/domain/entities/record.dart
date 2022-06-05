@@ -1,7 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-import 'package:personal_budget/feature/record/domain/entities/category.dart';
-
 class Record extends Equatable {
   const Record({
     required this.id,
@@ -15,7 +13,8 @@ class Record extends Equatable {
   final int id;
   final double amount;
   final String description;
-  final Category category;
+  // TODO: add category class
+  final String category;
   final DateTime date;
   final bool isExpense;
 

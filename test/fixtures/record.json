@@ -1,0 +1,12 @@
+{
+  "data": {
+    "record": {
+      "id": 1,
+      "amount": 100.0,
+      "description": "description1",
+      "category": "category1",
+      "date": "2022-05-29T16:09:08Z",
+      "isExpense": true
+    }
+  }
+}
