@@ -27,4 +27,15 @@ class RecordModel extends Record {
       isExpense: json['isExpense'] as bool,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'amount': amount,
+      'description': description,
+      'category': category,
+      'date': date.toIso8601String(),
+      'isExpense': isExpense,
+    };
+  }
 }

@@ -42,4 +42,26 @@ void main() {
       },
     );
   });
+
+  group('toJson', () {
+    test(
+      'should return a JSON map containing the proper data',
+      () async {
+        //arrange
+        final result = tRecordModel.toJson();
+        //act
+        final expectedMap = {
+          'id': 1,
+          'amount': 100,
+          'description': 'description1',
+          'category': 'category1',
+          'date': '2022-05-29T16:09:08.000Z',
+          'isExpense': true,
+        };
+
+        //assert
+        expect(result, expectedMap);
+      },
+    );
+  });
 }
