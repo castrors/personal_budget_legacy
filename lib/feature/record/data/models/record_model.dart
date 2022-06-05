@@ -18,14 +18,13 @@ class RecordModel extends Record {
         );
 
   factory RecordModel.fromJson(Map<String, dynamic> json) {
-    final model = json['data']['record'] as Map<String, dynamic>;
     return RecordModel(
-      id: model['id'] as int,
-      amount: model['amount'] as double,
-      description: model['description'] as String,
-      category: model['category'] as String,
-      date: DateTime.parse(model['date']as String),
-      isExpense: model['isExpense'] as bool,
+      id: json['id'] as int,
+      amount: json['amount'] as double,
+      description: json['description'] as String,
+      category: json['category'] as String,
+      date: DateTime.parse(json['date'] as String),
+      isExpense: json['isExpense'] as bool,
     );
   }
 }

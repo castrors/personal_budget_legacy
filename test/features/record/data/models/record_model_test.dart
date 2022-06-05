@@ -9,7 +9,7 @@ import '../../../../fixtures/fixture_reader.dart';
 void main() {
   final tRecordModel = RecordModel(
     id: 1,
-    amount: 100.0,
+    amount: 100,
     description: 'description1',
     category: 'category1',
     date: DateTime.parse('2022-05-29T16:09:08Z'),
@@ -17,7 +17,7 @@ void main() {
   );
 
   test(
-    'should be a subclas of RecordModel entity',
+    'should be a subclass of Record entity',
     () async {
       //assert
       expect(tRecordModel, isA<Record>());
@@ -32,7 +32,11 @@ void main() {
         final jsonMap =
             json.decode(fixture('record.json')) as Map<String, dynamic>;
         //act
-        final result = RecordModel.fromJson(jsonMap);
+
+        final result = RecordModel.fromJson(
+          (jsonMap['data'] as Map<String, dynamic>)['record']
+              as Map<String, dynamic>,
+        );
         //assert
         expect(result, tRecordModel);
       },
